@@ -1,0 +1,16 @@
+<h2 align="center">Liste des Providers</h2>
+<ul>
+  <li *ngFor="let p of mesproviders">{{p}}</li>
+</ul>
+
+<h3 align="center">Liste des users</h3>
+<table class="table" align="center" border="1">
+  <tr><th>Id</th><th>First Name</th><th>Last Name</th><th>Email</th><th>Profil</th></tr>
+  <tr *ngFor="let u of users">
+    <td>{{u.id}}</td>
+    <td>{{u.first_name}}</td>
+    <td>{{u.last_name}}</td>
+    <td>{{u.email}}</td>
+    <td><img src={{u.avatar}}/></td>
+  </tr>
+</table>
