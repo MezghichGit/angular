@@ -37,10 +37,11 @@ export class ProviderListComponent implements OnInit {
       }
     );
   }
-  /*
+
   updateProvider(myObj) {
     this.router.navigate(['updateProvider' + '/' + myObj['id']]);
   }
+
   /*ngOnInit(): void {
     this.mesproviders = this.service.getProviders();
     this.service.getUser().subscribe(
