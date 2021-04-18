@@ -6,11 +6,11 @@ import { ProviderListComponent } from './provider-list/provider-list.component';
 import { ProviderUpdateComponent } from './provider-update/provider-update.component';
 
 const routes: Routes = [
-
+  { path: "", pathMatch: "full", redirectTo: "app-navbar" },
   { path: "contact", component: ContactComponent },
   { path: "addProvider", component: ProviderAddComponent },
   { path: "listProvider", component: ProviderListComponent },
-  { path: "updateProvider", component: ProviderUpdateComponent }
+  { path: "updateProvider/:id", component: ProviderUpdateComponent }
 ];
 
 @NgModule({
