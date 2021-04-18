@@ -1,23 +1,29 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
 export class ProvidersService {
- private tab:string[]=["Samsung","Nokia","HP"];
- private users:any;
+  urlProviders = 'http://127.0.0.1:8080/providers';
 
- private url = "https://reqres.in/api/users";
+  //private tab:string[]=["Samsung","Nokia","HP"];
+  //private users:any;
 
-  constructor(private http:HttpClient) { }
+  //private url = "https://reqres.in/api/users";
 
-  public getProviders()
-  {
-    return this.tab;
+  constructor(private http: HttpClient) { }
+
+  listProviders() {
+    return this.http.get(this.urlProviders + '/list');
   }
+  /*
+    public getProviders()
+    {
+      return this.tab;
+    }
 
-  public getUser()
-  {
-    return this.http.get(this.url);
-  }
+    public getUser()
+    {
+      return this.http.get(this.url);
+    }*/
 }
