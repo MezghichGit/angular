@@ -27,12 +27,12 @@ export class ProvidersService {
   }
 
 
-  
+
   updateProvider(myObj) {
     return this.Http.put(this.urlProviders + '/' + myObj['id'], myObj);
   }
   deleteProvider(myObj) {
-    return this.Http.delete(this.urlProviders + '/' + myObj['id'], myObj)
+    return this.Http.delete(this.urlProviders + '/' + myObj['id'])
   }
   getProvider(id) {
     return this.Http.get(this.urlProviders + '/' + id)

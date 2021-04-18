@@ -14,13 +14,14 @@ export class ProviderListComponent implements OnInit {
   mesproviders: string[];
   users: Avatar[];
   ngOnInit() {
-    this.service.listProviders().subscribe(
+    this.refreshListProviders();
+    /*this.service.listProviders().subscribe(
       response => {
         this.providers = response;
       }
-    );
+    );*/
   }
-/*
+
   deleteProvider(myObj) {
     //console.log(this.provider);
     this.service.deleteProvider(myObj).subscribe(response => {
@@ -28,6 +29,7 @@ export class ProviderListComponent implements OnInit {
       this.refreshListProviders();
     })
   }
+
   refreshListProviders() {
     this.service.listProviders().subscribe(
       response => {
@@ -35,6 +37,7 @@ export class ProviderListComponent implements OnInit {
       }
     );
   }
+  /*
   updateProvider(myObj) {
     this.router.navigate(['updateProvider' + '/' + myObj['id']]);
   }
