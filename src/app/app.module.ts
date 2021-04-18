@@ -10,6 +10,7 @@ import { ProviderListComponent } from './provider-list/provider-list.component';
 import { ProviderAddComponent } from './provider-add/provider-add.component';
 import { ProviderUpdateComponent } from './provider-update/provider-update.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { ArticleListComponent } from './article-list/article-list.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     ProviderListComponent,
     ProviderAddComponent,
     ProviderUpdateComponent,
-    NavbarComponent
+    NavbarComponent,
+    ArticleListComponent
   ],
   imports: [
     BrowserModule,

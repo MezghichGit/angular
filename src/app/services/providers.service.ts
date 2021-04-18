@@ -1,11 +1,14 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { environment } from "../../environments/environment";
 @Injectable({
   providedIn: 'root'
 })
 export class ProvidersService {
-  urlProviders = 'http://127.0.0.1:8080/providers';
+  //urlProviders = 'http://127.0.0.1:8080/providers';
+  //urlProviders = 'http://127.0.0.1:8086/amsrest/providers';
   provider: any;
+  urlProviders = environment.rootURL+'/providers';
   //private tab:string[]=["Samsung","Nokia","HP"];
   //private users:any;
 
